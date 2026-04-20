@@ -7,7 +7,7 @@ import { User } from '../models/user.js';
 import { createSession, setSessionCookies } from '../services/auth.js';
 import { Session } from '../models/session.js';
 import jwt from 'jsonwebtoken';
-import { sendEmail } from '../../utils/sendMail.js';
+import { sendEmail } from '../utils/sendMail.js';
 
 export const registerUser = async (req, res) => {
   const { email, password } = req.body;
@@ -114,6 +114,7 @@ export const requestResetEmail = async (req, res) => {
   });
   const templatePath = path.join(
     process.cwd(),
+    'src',
     'templates',
     'reset-password-email.html',
   );
