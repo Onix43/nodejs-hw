@@ -4,7 +4,6 @@ import { Note } from '../models/note.js';
 export const connectMongoDB = async () => {
   try {
     const mongoUrl = process.env.MONGO_URL;
-    console.log(mongoUrl);
     await mongoose.connect(mongoUrl);
     console.log('✅ MongoDB connection established successfully');
 
