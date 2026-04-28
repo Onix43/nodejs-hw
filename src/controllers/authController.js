@@ -67,7 +67,7 @@ export const refreshUserSession = async (req, res) => {
 
   await Session.deleteOne({
     _id: req.cookies.sessionId,
-    accessToken: req.cookies.accessToken,
+    refreshToken: req.cookies.refreshToken,
   });
 
   const newSession = await createSession(session.userId);

@@ -44,7 +44,7 @@ export const createNoteSchema = {
   [Segments.BODY]: Joi.object({
     title: Joi.string().min(1).required().messages({
       'string.base': 'Title must be a string',
-      'string.min': 'Title must be greaten or equal than 1 symbol',
+      'string.min': 'Title must be greater or equal than 1 symbol',
       'any.required': 'Title must be provided',
     }),
     content: Joi.string().trim().allow('').messages({
@@ -69,7 +69,7 @@ export const updateNoteSchema = {
   [Segments.BODY]: Joi.object({
     title: Joi.string().min(1).messages({
       'string.base': 'Title must be a string',
-      'string.min': 'Title must be greaten or equal than 1 symbol',
+      'string.min': 'Title must be greater or equal than 1 symbol',
     }),
     content: Joi.string().trim().allow('').messages({
       'string.base': 'Content must be a string',
